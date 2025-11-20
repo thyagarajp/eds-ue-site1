@@ -1,8 +1,6 @@
 mountpoints:
   /:
-    url: "https://main--eds-ue-site1--thyagarajp.aem.live/"
+    url: "https://<aem-author>/bin/franklin.delivery/thyagarajp/eds-ue-site1/main"
     type: "markup"
     suffix: ".html"
 
-authoring:
-  url: "https://author-p130360-e1272151.adobeaemcloud.com"
