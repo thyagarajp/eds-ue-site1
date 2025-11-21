@@ -1,0 +1,17 @@
+.block.quote {
+  padding: 20px;
+  border-left: 4px solid #ccc;
+  margin: 20px 0;
+}
+
+.block.quote blockquote {
+  font-style: italic;
+  margin: 0;
+}
+
+.block.quote .author {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+}
