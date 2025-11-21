@@ -421,9 +421,23 @@
         "label": "Link"
       },
       {
-        "component": "button",
-        "name": "button",
-        "label": "Button"
+        "component": "select",
+        "name": "linkType",
+        "label": "Type",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
       }
     ]
   },
