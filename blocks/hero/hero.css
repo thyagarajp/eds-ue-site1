@@ -16,6 +16,25 @@
   color: var(--background-color);
 }
 
+.hero-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content p,
+.hero-content h1,
+.hero-content h2,
+.hero-content h3 {
+  color: var(--background-color);
+}
+
+.hero-content .button {
+  margin-top: 16px;
+}
+
 .hero picture {
   position: absolute;
   z-index: -1;

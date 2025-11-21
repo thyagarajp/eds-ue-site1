@@ -421,9 +421,21 @@
         "label": "Link"
       },
       {
+        "component": "text",
+        "name": "linkText",
+        "label": "Button Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "label": "Button Title",
+        "valueType": "string"
+      },
+      {
         "component": "select",
         "name": "linkType",
-        "label": "Type",
+        "label": "Button Type",
         "options": [
           {
             "name": "default",
