@@ -1,12 +1,12 @@
 {
   "mappings": [
-    "/content/eds-ue-site1/:/",
-    "/content/eds-ue-site1/configuration:/.helix/config.json",
-    "/content/eds-ue-site1/headers:/.helix/headers.json",
-    "/content/eds-ue-site1/metadata:/metadata.json",
-    "/content/eds-ue-site1.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
+    "/content/thp-ue/:/",
+    "/content/thp-ue/configuration:/.helix/config.json",
+    "/content/thp-ue/headers:/.helix/headers.json",
+    "/content/thp-ue/metadata:/metadata.json",
+    "/content/thp-ue.resource/enrichment/enrichment.json:/enrichment/enrichment.json"
   ],
   "includes": [
-    "/content/eds-ue-site1/"
+    "/content/thp-ue/"
   ]
 }
