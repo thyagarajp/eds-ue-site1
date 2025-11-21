@@ -172,6 +172,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Quote",
+          "id": "quote",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Quote",
+                  "model": "quote"
+                }
+              }
+            }
+          }
         }
       ]
     },
@@ -709,23 +724,6 @@
           }
         }
       ]
-    },
-    {
-      "id": "quote",
-      "title": "Quote",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Quote",
-              "model": "quote",
-              "quote": "<p>This is a quote.</p>",
-              "author": "Author name"
-            }
-          }
-        }
-      }
     }
   ]
 }
