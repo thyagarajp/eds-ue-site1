@@ -1,52 +1,36 @@
 export default function decorate(block) {
-  // Get all rows from the block
-  const rows = [...block.children];
-  
+  const picture = block.querySelector('picture');
+  const text = block.querySelector('p, h1, h2, h3, h4, h5, h6');
+  const link = block.querySelector('a');
+
   // Create wrapper for content
   const wrapper = document.createElement('div');
   wrapper.className = 'hero-content';
 
-  rows.forEach((row) => {
-    const cells = [...row.children];
-    
-    cells.forEach((cell) => {
-      // Handle picture (background image)
-      const picture = cell.querySelector('picture');
-      if (picture) {
-        block.prepend(picture);
-        return;
-      }
+  // Add text if exists
+  if (text) {
+    wrapper.appendChild(text);
+  }
 
-      // Handle text content
-      const textElements = cell.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
-      if (textElements.length > 0) {
-        textElements.forEach((el) => wrapper.appendChild(el.cloneNode(true)));
-      }
+  // Add button if link exists
+  if (link) {
+    link.className = 'button';
+    // Apply button type if specified
+    const linkType = link.getAttribute('data-link-type');
+    if (linkType) {
+      link.classList.add(linkType);
+    }
+    wrapper.appendChild(link);
+  }
 
-      // Handle links (buttons)
-      const links = cell.querySelectorAll('a');
-      if (links.length > 0) {
-        links.forEach((link) => {
-          const button = link.cloneNode(true);
-          button.className = 'button';
-          
-          // Check for button type in the link's parent or data attributes
-          const parentText = link.parentElement?.textContent || '';
-          if (parentText.includes('primary') || link.classList.contains('primary')) {
-            button.classList.add('primary');
-          } else if (parentText.includes('secondary') || link.classList.contains('secondary')) {
-            button.classList.add('secondary');
-          }
-          
-          wrapper.appendChild(button);
-        });
-      }
-    });
-  });
-
-  // Clear the block and rebuild
+  // Clear block and rebuild
   block.innerHTML = '';
-  
-  // Append the content wrapper
+
+  // Add picture first (background)
+  if (picture) {
+    block.appendChild(picture);
+  }
+
+  // Add content wrapper
   block.appendChild(wrapper);
 }
