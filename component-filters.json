@@ -25,8 +25,7 @@
       "product-teaser",
       "product-recommendations",
       "quote",
-      "separator",
-      "accordion"
+      "separator"
     ]
   },
   {
@@ -386,12 +385,6 @@
       "columns",
       "fragment",
       "commerce-wishlist"
-    ]
-  },
-  {
-    "id": "accordion",
-    "components": [
-      "accordion-item"
     ]
   },
   {

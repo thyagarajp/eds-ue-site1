@@ -195,25 +195,6 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "label",
-        "label": "Label - ラベル",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "contents",
-        "label": "Contents - 内容",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {
