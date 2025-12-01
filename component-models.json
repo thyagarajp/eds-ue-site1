@@ -846,5 +846,60 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "separator",
+    "title": "Separator",
+    "fields": [
+      {
+        "component": "select",
+        "name": "style",
+        "label": "Style",
+        "valueType": "string",
+        "value": "Line",
+        "options": [
+          {
+            "name": "Line",
+            "value": "Line"
+          },
+          {
+            "name": "Dashed",
+            "value": "Dashed"
+          },
+          {
+            "name": "Spacer",
+            "value": "Spacer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "title": "Accordion Item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "label",
+        "label": "Label - ラベル",
+        "valueType": "string",
+        "required": true,
+        "validation": {
+          "type": "required"
+        },
+        "validationMessage": "Please enter a label - ラベルを入力してください"
+      },
+      {
+        "component": "richtext",
+        "name": "contents",
+        "label": "Contents - 内容",
+        "valueType": "string",
+        "required": true,
+        "validation": {
+          "type": "required"
+        },
+        "validationMessage": "Please enter content - 内容を入力してください"
+      }
+    ]
   }
 ]

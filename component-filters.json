@@ -20,8 +20,14 @@
       "fragment",
       "product-teaser",
       "product-recommendations",
-      "quote"
+      "quote",
+      "separator",
+      "accordion"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
   },
   {
     "id": "enrichment-section",

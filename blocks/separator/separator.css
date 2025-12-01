@@ -1,0 +1,62 @@
+/* Separator Block */
+.separator {
+  width: 100%;
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.separator hr {
+  border: 0;
+  margin: 0;
+}
+
+/* Line Style - Thicker line for stronger separation */
+.separator.separator-line {
+  margin: 40px auto;
+}
+
+.separator.separator-line hr {
+  height: 2px;
+  background-color: var(--text-color, #000);
+}
+
+/* Dashed Style - Thinner line for softer separation */
+.separator.separator-dashed {
+  margin: 40px auto;
+}
+
+.separator.separator-dashed hr {
+  height: 1px;
+  background-image: linear-gradient(to right, var(--text-color, #000) 50%, transparent 50%);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+}
+
+/* Spacer Style - Only spacing, no line */
+.separator.separator-spacer {
+  margin: 0 auto;
+}
+
+.separator.separator-spacer hr {
+  height: 32px;
+  background: transparent;
+}
+
+/* Navy Gradation Section - White line */
+.section[style*="navy"] .separator.separator-line hr,
+.section.navy-gradation .separator.separator-line hr {
+  background-color: #fff;
+}
+
+.section[style*="navy"] .separator.separator-dashed hr,
+.section.navy-gradation .separator.separator-dashed hr {
+  background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .separator.separator-line,
+  .separator.separator-dashed {
+    margin: 32px auto;
+  }
+}
