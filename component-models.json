@@ -198,13 +198,13 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "name": "label",
         "label": "Label",
         "valueType": "string"
       },
       {
-        "component": "text",
+        "component": "richtext",
         "name": "body",
         "label": "Body",
         "valueType": "string"
