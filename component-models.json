@@ -150,51 +150,6 @@
     ]
   },
   {
-    "id": "quote",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "quote",
-        "label": "Quote Text",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "text",
-        "name": "author",
-        "label": "Author",
-        "valueType": "string",
-        "value": ""
-      }
-    ]
-  },
-  {
-    "id": "separator",
-    "fields": [
-      {
-        "component": "select",
-        "name": "style",
-        "label": "Style",
-        "valueType": "string",
-        "value": "Line",
-        "options": [
-          {
-            "name": "Line",
-            "value": "Line"
-          },
-          {
-            "name": "Dashed",
-            "value": "Dashed"
-          },
-          {
-            "name": "Spacer",
-            "value": "Spacer"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "accordion-item",
     "fields": [
       {
