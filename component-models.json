@@ -150,25 +150,6 @@
     ]
   },
   {
-    "id": "accordion-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "label",
-        "label": "Label",
-        "value": "",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "body",
-        "label": "Body",
-        "value": "",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {

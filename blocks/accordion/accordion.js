@@ -4,6 +4,8 @@
  * https://www.hlx.live/developer/block-collection/accordion
  */
 
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     // Validate that row has required children
@@ -21,6 +23,9 @@ export default function decorate(block) {
     
     const summary = document.createElement('summary');
     summary.className = 'accordion-item-label';
+    
+    // Move instrumentation from label to summary (preserves Universal Editor data attributes)
+    moveInstrumentation(label, summary);
     
     // Move all child nodes from label to summary
     if (label.childNodes && label.childNodes.length > 0) {
@@ -42,6 +47,9 @@ export default function decorate(block) {
     // decorate accordion item
     const details = document.createElement('details');
     details.className = 'accordion-item';
+    
+    // Move instrumentation from row to details (preserves Universal Editor data attributes)
+    moveInstrumentation(row, details);
     
     // Add accessibility attributes
     summary.setAttribute('role', 'button');
