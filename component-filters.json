@@ -395,5 +395,9 @@
   {
     "id": "column",
     "components": ["text", "image", "button", "title"]
+  },
+  {
+    "id": "accordion",
+    "components": ["accordion-item"]
   }
 ]
