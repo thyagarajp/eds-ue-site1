@@ -5,20 +5,20 @@
   margin: 0 auto;
 }
 
-.accordion details {
+.accordion .accordion-item {
   border: 1px solid #dadada;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.accordion details + details {
+.accordion .accordion-item + .accordion-item {
   margin-top: 24px;
 }
 
-.accordion details p {
+.accordion .accordion-item p {
   margin-bottom: 0.8em;
 }
 
-.accordion details summary {
+.accordion .accordion-item-label {
   position: relative;
   padding: 16px;
   padding-right: 46px;
@@ -29,23 +29,19 @@
   font-weight: 600;
 }
 
-.accordion details[open] summary {
+.accordion .accordion-item.is-open .accordion-item-label {
   background-color: var(--light-color);
 }
 
-.accordion details summary:focus,
-.accordion details summary:hover {
+.accordion .accordion-item-label:focus,
+.accordion .accordion-item-label:hover {
   background-color: var(--light-color);
   outline: 2px solid var(--primary-color, #000);
   outline-offset: 2px;
 }
 
-.accordion details summary::-webkit-details-marker {
-  display: none;
-}
-
 /* +/- Icon */
-.accordion details summary .accordion-icon {
+.accordion .accordion-item-label .accordion-icon {
   position: absolute;
   top: 50%;
   right: 18px;
@@ -61,39 +57,39 @@
 }
 
 /* Plus icon when collapsed */
-.accordion details summary .accordion-icon::before {
+.accordion .accordion-item-label .accordion-icon::before {
   content: "+";
   display: block;
 }
 
 /* Minus icon when expanded */
-.accordion details[open] summary .accordion-icon::before {
+.accordion .accordion-item.is-open .accordion-item-label .accordion-icon::before {
   content: "−";
 }
 
-.accordion details .accordion-item-body {
+.accordion .accordion-item-body {
   padding: 16px;
 }
 
-.accordion details[open] .accordion-item-body {
+.accordion .accordion-item.is-open .accordion-item-body {
   border-top: 1px solid #dadada;
   background-color: var(--background-color);
 }
 
 /* Navy Gradation Section - White text */
-.section[style*="navy"] .accordion details summary,
-.section.navy-gradation .accordion details summary,
-.section[style*="navy"] .accordion details .accordion-item-body,
-.section.navy-gradation .accordion details .accordion-item-body {
+.section[style*="navy"] .accordion .accordion-item-label,
+.section.navy-gradation .accordion .accordion-item-label,
+.section[style*="navy"] .accordion .accordion-item-body,
+.section.navy-gradation .accordion .accordion-item-body {
   color: #fff;
 }
 
-.section[style*="navy"] .accordion details,
-.section.navy-gradation .accordion details {
+.section[style*="navy"] .accordion .accordion-item,
+.section.navy-gradation .accordion .accordion-item {
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-.section[style*="navy"] .accordion details[open] .accordion-item-body,
-.section.navy-gradation .accordion details[open] .accordion-item-body {
+.section[style*="navy"] .accordion .accordion-item.is-open .accordion-item-body,
+.section.navy-gradation .accordion .accordion-item.is-open .accordion-item-body {
   border-top-color: rgba(255, 255, 255, 0.3);
 }

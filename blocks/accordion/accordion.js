@@ -6,45 +6,42 @@
 
 export default function decorate(block) {
   [...block.children].forEach((row) => {
+    // Add accordion-item class to the row for styling
+    row.className = 'accordion-item';
+
     // decorate accordion item label
     const label = row.children[0];
-    const summary = document.createElement('summary');
-    summary.className = 'accordion-item-label';
-    summary.setAttribute('role', 'button');
-    summary.setAttribute('aria-expanded', 'false');
-    summary.setAttribute('tabindex', '0');
-    summary.append(...label.childNodes);
+    label.className = 'accordion-item-label';
+    label.setAttribute('role', 'button');
+    label.setAttribute('aria-expanded', 'false');
+    label.setAttribute('tabindex', '0');
 
     // Add icon for expand/collapse
     const icon = document.createElement('span');
     icon.className = 'accordion-icon';
     icon.setAttribute('aria-hidden', 'true');
-    summary.appendChild(icon);
+    label.appendChild(icon);
 
     // decorate accordion item body
     const body = row.children[1];
     body.className = 'accordion-item-body';
     body.setAttribute('role', 'region');
+    body.style.display = 'none';
 
-    // decorate accordion item
-    const details = document.createElement('details');
-    details.className = 'accordion-item';
-    details.append(summary, body);
-
-    // Handle toggle events for accessibility
-    details.addEventListener('toggle', () => {
-      const isOpen = details.hasAttribute('open');
-      summary.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    // Handle click events for toggle
+    label.addEventListener('click', () => {
+      const isOpen = body.style.display !== 'none';
+      body.style.display = isOpen ? 'none' : 'block';
+      label.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      row.classList.toggle('is-open', !isOpen);
     });
 
     // Keyboard support for Enter and Space
-    summary.addEventListener('keydown', (e) => {
+    label.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        details.open = !details.open;
+        label.click();
       }
     });
-
-    row.replaceWith(details);
   });
 }
