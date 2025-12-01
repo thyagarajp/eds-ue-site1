@@ -1,11 +1,15 @@
 [
   {
     "id": "main",
-    "components": ["section"]
+    "components": [
+      "section"
+    ]
   },
   {
     "id": "columns-main",
-    "components": ["columns-section"]
+    "components": [
+      "columns-section"
+    ]
   },
   {
     "id": "section",
@@ -19,10 +23,7 @@
       "columns",
       "fragment",
       "product-teaser",
-      "product-recommendations",
-      "quote",
-      "separator",
-      "accordion"
+      "product-recommendations"
     ]
   },
   {
@@ -385,19 +386,30 @@
     ]
   },
   {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
     "id": "cards",
-    "components": ["card"]
+    "components": [
+      "card"
+    ]
   },
   {
     "id": "columns",
-    "components": ["column"]
+    "components": [
+      "column"
+    ]
   },
   {
     "id": "column",
-    "components": ["text", "image", "button", "title"]
-  },
-  {
-    "id": "accordion",
-    "components": ["accordion-item"]
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
   }
 ]

@@ -150,6 +150,25 @@
     ]
   },
   {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "label",
+        "label": "Label - ラベル",
+        "valueType": "string",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "contents",
+        "label": "Contents - 内容",
+        "valueType": "string",
+        "value": ""
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -414,37 +433,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "linkText",
-        "label": "Button Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "linkTitle",
-        "label": "Button Title",
-        "valueType": "string"
-      },
-      {
-        "component": "select",
-        "name": "linkType",
-        "label": "Button Type",
-        "options": [
-          {
-            "name": "default",
-            "value": ""
-          },
-          {
-            "name": "primary",
-            "value": "primary"
-          },
-          {
-            "name": "secondary",
-            "value": "secondary"
-          }
-        ]
       }
     ]
   },
@@ -826,71 +814,6 @@
         "valueType": "string",
         "value": "wishlist",
         "readOnly": true
-      }
-    ]
-  },
-  {
-    "id": "quote",
-    "title": "Quote",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "quote",
-        "label": "Quote Text",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "author",
-        "label": "Author",
-        "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "separator",
-    "title": "Separator",
-    "fields": [
-      {
-        "component": "select",
-        "name": "style",
-        "label": "Style",
-        "valueType": "string",
-        "value": "Line",
-        "options": [
-          {
-            "name": "Line",
-            "value": "Line"
-          },
-          {
-            "name": "Dashed",
-            "value": "Dashed"
-          },
-          {
-            "name": "Spacer",
-            "value": "Spacer"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "accordion-item",
-    "title": "Accordion Item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "label",
-        "label": "Label - ラベル",
-        "valueType": "string",
-        "value": ""
-      },
-      {
-        "component": "richtext",
-        "name": "contents",
-        "label": "Contents - 内容",
-        "valueType": "string",
-        "value": ""
       }
     ]
   }
