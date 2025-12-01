@@ -26,10 +26,6 @@
     ]
   },
   {
-    "id": "accordion",
-    "components": ["accordion-item"]
-  },
-  {
     "id": "enrichment-section",
     "components": [
       "text",
