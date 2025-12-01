@@ -23,7 +23,10 @@
       "columns",
       "fragment",
       "product-teaser",
-      "product-recommendations"
+      "product-recommendations",
+      "quote",
+      "separator",
+      "accordion"
     ]
   },
   {
