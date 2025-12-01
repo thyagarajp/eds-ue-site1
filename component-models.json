@@ -883,22 +883,14 @@
         "name": "label",
         "label": "Label - ラベル",
         "valueType": "string",
-        "required": true,
-        "validation": {
-          "type": "required"
-        },
-        "validationMessage": "Please enter a label - ラベルを入力してください"
+        "value": ""
       },
       {
         "component": "richtext",
         "name": "contents",
         "label": "Contents - 内容",
         "valueType": "string",
-        "required": true,
-        "validation": {
-          "type": "required"
-        },
-        "validationMessage": "Please enter content - 内容を入力してください"
+        "value": ""
       }
     ]
   }
